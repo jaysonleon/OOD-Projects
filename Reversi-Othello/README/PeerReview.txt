@@ -1,0 +1,30 @@
+Peer Review:
+Design & Implementation Critique
+Overall the design of the model was very simple and easy to understand. One thing we did not understand is the
+getNeighbors method. Since that method is only used once, and by only one strategy, we think that it could have been
+implemented as a private helper method for the individual strategy rather than in the model interface; since it does not
+have anything to do with the rules/logic of the game. Another appropriate place for that method can be in the object used to represent the
+board or the object used to represent the tile. In terms of the design and implementation of the strategies, we think that the return types are confusing.
+Rather than returning a List of the coordinates, we think that an Optional<coordinate> would have accomplished the same thing with more ease. It gets kind of confusing
+when there are no moves available, and an empty list is returned; we think that returning an Optional.Empty would be better here. Other than that,
+we have no critiques on the design or implementation of the strategies. In terms of the view, we think that they did a very good job, it was easy
+for us to adapt their code to ours, and we had no problem understanding how the provided view worked.
+
+Documentation Critique
+With respect to documentation, we think that our providers were a little lacking in some parts. While they did
+a good job with the naming of their classes and methods, with respect to their purposes and actions, we thought that
+some of the logic used was hard to follow, especially when using Java Streams. We thought that the javaDocs were
+well written and easy to understand, but the commenting of computational logic used by strategies, for example,
+were hard to understand. Especially when considering the perspective of a customer with little to no knowledge of Java Streams.
+We think that with some simple explanations of what is going on 'under the hood' of some of your more complicated methods would be nice.
+Overall, the documentation was very effective. Due to the clarity of their README and their javaDocs, we were able to adapt all of their features and convert between
+our and their coordinate systems with ease.
+
+Design/Code Limitations and Suggestions on How to Address Them
+We do think that this codebase is slightly limited in terms of allowing flexibility for other types of reversi. For example,
+if asked to implement a version of square reversi, because a lot of the methods in the ReadOnly and Reversimodel interfaces have
+parameters and return types of HexCoordinate, it may prove difficult when trying to implement a different coordinate system. A potential solution to this
+could be to use generic return and parameter types, so that the model is able to work with HexCoordinates and other types of coordinate systems as well.
+This cascades down to strategies, since they also use HexCoordinate as a parameter and return type of some methods, which would have to be refactored to
+support a different version of reversi. However, we think that the view is flexible enough to support different versions of reversi, given that the proper implementation for
+displaying the game and converting coordinates are added. Overall, the codebase is easy to understand and use. Great job!

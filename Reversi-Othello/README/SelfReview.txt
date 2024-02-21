@@ -1,0 +1,17 @@
+Self-Review:
+In terms of our own implementation and design, we wish that we had used generic return and parameter types,
+so that we could support different versions of reversi, if we chose to implement a square board, for example. In addition,
+we had our controller delegate converting coordinates to the view, but instead we should have had the view convert the coordinates
+before passing them to the controller. This would have made the controller more independent of the view.
+We learned about the importance of MVC and how it can be used to make code more modular and easier to understand.
+We also learned about the importance of testing, and how it can be used to ensure that code is working as expected.
+We also learned about the importance of documentation, and how vital it can be to understanding code, and how the lack thereof
+can create challenges.
+Overall, we gained experience working with a foreign codebase, and learned how to work as a term to understand and implement something
+with the code given to us.
+
+We had a decent experience with our providers. We were originally assigned a provider that told us that they were no longer
+working with their assigned partner, and we would be receiving the work of two individual groups. We were then assigned a new provider,
+who quickly sent us their code. They had to notify us that they had accidentally sent us code not vital to the implementation of the view or strategies, and told us
+to disregard them. When we had a question about their code, they were quick to respond and help us understand their code. Thanks to their README and documentation, we did not need
+to communicate with them much.
